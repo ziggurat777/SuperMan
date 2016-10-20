@@ -150,7 +150,7 @@ function createMarker(latlng, name) {
     //var contentString = html;
 
     var icon = {
-        url: "Content/image/point.png", // url
+        url: "../Content/image/point.png", // url
         //url: "image/FamilyWork.png",
         size: new google.maps.Size(36, 60),
         scaledSize: new google.maps.Size(36, 60), // scaled size

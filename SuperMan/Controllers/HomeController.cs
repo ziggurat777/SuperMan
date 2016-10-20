@@ -16,5 +16,14 @@ namespace SuperMan.Controllers
             return View();
         }
 
+        public ActionResult CreateMission()
+        {
+            return View();
+        }
+
+        public ActionResult SearchMission()
+        {
+            return View();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿<div class="container">
+﻿@using SuperMan.Common;
+
+<div class="container">
     <div class="row">
         <div class="col-lg-12">
             <section>
@@ -57,27 +59,27 @@
                             <p></p>
                             <div class="row">
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
                                     <p>居家清潔1</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
                                     <p>居家清潔2</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
                                     <p>居家清潔3</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
                                     <p>居家清潔4</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
                                     <p>居家清潔5</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
                                     <p>居家清潔6</p>
                                 </div>
                             </div>
@@ -89,27 +91,27 @@
                             <p></p>
                             <div class="row">
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
+                                    <img class="image-egg image-halo" src="@Html.ImageUrl("egg2.png")" />
                                     <p>X 5</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
+                                    <img class="image-egg image-halo" src="@Html.ImageUrl("egg2.png")" />
                                     <p>X 10</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
+                                    <img class="image-egg image-halo" src="@Html.ImageUrl("egg2.png")" />
                                     <p>X 15</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
+                                    <img class="image-egg image-halo" src="@Html.ImageUrl("egg2.png")" />
                                     <p>X 20</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
+                                    <img class="image-egg image-halo" src="@Html.ImageUrl("egg2.png")" />
                                     <p>X 25</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" id="custom-egg" />
+                                    <img class="image-egg image-halo" src="@Html.ImageUrl("egg2.png")" id="custom-egg" />
                                     <div class="form-group" style="padding-top: 5px">
                                         <input id="custom-egg-val" class="has-error" type="text" name="eggcount" value="" placeholder="蛋蛋數" disabled="disabled" size="6px"
                                             data-toggle="tooltip" data-placement="left" title="只可輸入5的倍數" />
@@ -125,17 +127,17 @@
                             <div class="well well-lg">
                                 <div id="t-position" class="col-lg-5">
                                     <i class="" aria-hidden="true"></i>
-                                    <img src="Content/image/Google_Maps_Icon.png" class="image-mission-small" />
+                                    <img src="@Html.ImageUrl("Google_Maps_Icon.png")" class="image-mission-small" />
                                     <strong></strong>
                                 </div>
                                 <div id="t-missionType" class="col-lg-4">
                                     <i class="" aria-hidden="true"></i>
-                                    <img src="Content/image/FamilyWork.png" class="image-mission-small" />
+                                    <img src="@Html.ImageUrl("FamilyWork.png")" class="image-mission-small" />
                                     <strong></strong>
                                 </div>
                                 <div id="t-egg" class="col-lg-3">
                                     <i class="" aria-hidden="true"></i>
-                                    <img src="Content/image/egg2.png" class="image-mission-small" />
+                                    <img src="@Html.ImageUrl("egg2.png")" class="image-mission-small" />
                                     <strong></strong>
                                 </div>
                             </div>
@@ -173,6 +175,10 @@
 
     <script>
         google.maps.event.addDomListener(window, 'load', showUserClickPanel);
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
     <script src="~/Content/Script/customer2.js"></script>
 </div>
