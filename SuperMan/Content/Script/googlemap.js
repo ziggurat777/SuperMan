@@ -9,6 +9,7 @@ function showPosition() {
         zoom: 13,
         center: center,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false
     });
 
     var data = [
@@ -19,13 +20,20 @@ function showPosition() {
         { latitude: 24.181015, longitude: 120.545292 },
         { latitude: 24.197154, longitude: 120.523584 },
         { latitude: 24.189514, longitude: 120.512417 },
+        { latitude: 24.146845, longitude: 120.645157 },
+        { latitude: 24.145183, longitude: 120.646917 },
+        { latitude: 24.145875, longitude: 120.644701 },
+        { latitude: 24.144960, longitude: 120.629129 },
+        { latitude: 24.139321, longitude: 120.584154 },
+        { latitude: 24.186072, longitude: 120.661487 },
+        { latitude: 24.152009, longitude: 120.682258 },
     ];
 
     var markers = [];
 
     var icon = {
         //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
-        url: "image/FamilyWork.png",
+        url: "../Content/Image/tag_work.png",
         size: new google.maps.Size(36, 48),
         scaledSize: new google.maps.Size(36, 48), // scaled size
         origin: new google.maps.Point(0, 0), // origin
@@ -34,7 +42,25 @@ function showPosition() {
 
     var icon_tool = {
         //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
-        url: "image/FamilyWork_1.png",
+        url: "../Content/Image/tag_help.png",
+        size: new google.maps.Size(36, 48),
+        scaledSize: new google.maps.Size(36, 48), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    };
+
+    var icon_join = {
+        //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
+        url: "../Content/image/tag_join.png",
+        size: new google.maps.Size(36, 48),
+        scaledSize: new google.maps.Size(36, 48), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    };
+
+    var icon_join2 = {
+        //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
+        url: "../Content/image/tag_join2.png",
         size: new google.maps.Size(36, 48),
         scaledSize: new google.maps.Size(36, 48), // scaled size
         origin: new google.maps.Point(0, 0), // origin
@@ -150,7 +176,7 @@ function createMarker(latlng, name) {
     //var contentString = html;
 
     var icon = {
-        url: "../Content/image/point.png", // url
+        url: "../Content/Image/point.png", // url
         //url: "image/FamilyWork.png",
         size: new google.maps.Size(36, 60),
         scaledSize: new google.maps.Size(36, 60), // scaled size

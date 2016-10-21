@@ -1,7 +1,11 @@
-﻿<div class="container">
+﻿@using SuperMan.Common;
+
+<link rel="stylesheet" href="@Html.CssUrl("custom.css")" />
+
+<div class="container">
     <!-- Page Header -->
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <div class="well">
                 <button id="Area" class="btn btn-super" type="button">
                     Area
@@ -22,91 +26,46 @@
                     Other
                 </button>
             </div>
-            <div id="fackData" style="display: none">
-                <div id="Area-content" style="display: none">
-                    <button class="btn btn-xs btn-super" type="button">
-                        台北 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        台中 
-                    </button>
-                </div>
-                <div id="Type1-content" style="display: none">
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type1-1 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type1-2
-                    </button>
-                </div>
-                <div id="Type2-content" style="display: none">
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-1 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-2 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-3 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-4 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-5 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-6 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-7 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type2-8 
-                    </button>
-                </div>
-                <div id="Type3-content" style="display: none">
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type3-1 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type3-2 
-                    </button>
-                </div>
-                <div id="Type4-content" style="display: none">
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type4-1
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Type4-2 
-                    </button>
-                </div>
-                <div id="Other-content" style="display: none">
-                    <button class="btn btn-xs btn-super" type="button">
-                        Other-1 
-                    </button>
-                    <button class="btn btn-xs btn-super" type="button">
-                        Other-2
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="panel panel-default" style="display: none">
-                <div id="search-filter" class="panel-body">
-                </div>
-            </div>
         </div>
     </div>
 
     <!-- Projects Row -->
     <div class="row">
-        <div class="col-md-12 portfolio-item">
+        <div class="col-lg-12">
+            <div id="mission-content">
+                <div class="show-mission"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                @*<div id="mission-info" style="display: none">
+                    <div class="hide-mission"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
+                    <div id="mission-title" class="mission">
+                        <h3>XXXXXX mission</h3>
+                    </div>
+                    <div id="mission-detail" class="mission">DDDDDD</div>
+                    <div id="mission-reward" class="mission">15 egg</div>
+                    <div id="mission-confirm" class="mission">
+                        <button>YES</button>
+                        <button>NO</button>
+                    </div>
+                </div>*@
+
+                <div id="mission-info" style="display: none" class="panel panel-default">
+                    <div class="hide-mission"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
+                    <div class="panel-body">
+                        <h4>XXXX mission</h4>
+                        <div class="well">...</div>
+                        <div class="well">...</div>
+                        <div class="well">...</div>
+                        <div class="well">...</div>
+                    </div>
+                </div>
+
             <div id="map"></div>
         </div>
     </div>
-    <!-- /.row -->
 </div>
+<!-- /.row -->
+</div>
+
+<script src="@Html.ScriptUrl("SearchMission.js")"></script>
 
 <script>
     google.maps.event.addDomListener(window, 'load', showPosition);

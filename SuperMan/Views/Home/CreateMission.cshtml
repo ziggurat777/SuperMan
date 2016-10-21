@@ -1,5 +1,6 @@
 ﻿@using SuperMan.Common;
 
+<link rel="stylesheet" href="@Html.CssUrl("stepbar.css")" />
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -180,5 +181,5 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    <script src="~/Content/Script/customer2.js"></script>
+    <script src="@Html.ScriptUrl("customer2.js")"></script>
 </div>

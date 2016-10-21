@@ -1,178 +1,24 @@
-﻿<div class="container">
+﻿<div class="jumbotron text-center">
+    <h1>My First Bootstrap Page</h1>
+    <p>Resize this responsive page to see the effect!</p>
+</div>
+
+<div class="container">
     <div class="row">
-        <div class="col-lg-12">
-            <section>
-                <div class="wizard">
-                    <div class="wizard-inner">
-                        <div class="connecting-line"></div>
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active">
-                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
-                                    <span class="round-tab">
-                                        <i class="fa fa-map-signs" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li role="presentation" class="disabled">
-                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
-                                    <span class="round-tab">
-                                        <i class="fa fa-filter" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li role="presentation" class="disabled">
-                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
-                                    <span class="round-tab">
-                                        <i class="fa fa-gift" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li role="presentation" class="disabled">
-                                <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
-                                    <span class="round-tab">
-                                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-content">
-                        <div class="tab-pane active" role="tabpanel" id="step1">
-                            <h3>選擇任務地點</h3>
-                            <!-- google map -->
-                            <div id="map"></div>
-                            <input type="hidden" id="missionlat" name="lat" value="">
-                            <input type="hidden" id="missionlng" name="lng" value="">
-                            <input type="hidden" id="missionAddress" name="addr" value="">
-                            <ul class="list-inline pull-right">
-                                <li>
-                                    <button type="button" class="btn btn-super next-step">Continue</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane" role="tabpanel" id="step2">
-                            <h3></h3>
-                            <p></p>
-                            <div class="row">
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
-                                    <p>居家清潔1</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
-                                    <p>居家清潔2</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
-                                    <p>居家清潔3</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
-                                    <p>居家清潔4</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
-                                    <p>居家清潔5</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="Content/image/FamilyWork.png" />
-                                    <p>居家清潔6</p>
-                                </div>
-                            </div>
-                            <ul class="list-inline pull-right">
-                            </ul>
-                        </div>
-                        <div class="tab-pane" role="tabpanel" id="step3">
-                            <h3></h3>
-                            <p></p>
-                            <div class="row">
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
-                                    <p>X 5</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
-                                    <p>X 10</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
-                                    <p>X 15</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
-                                    <p>X 20</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" />
-                                    <p>X 25</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-egg image-halo" src="Content/image/egg2.png" id="custom-egg" />
-                                    <div class="form-group" style="padding-top: 5px">
-                                        <input id="custom-egg-val" class="has-error" type="text" name="eggcount" value="" placeholder="蛋蛋數" disabled="disabled" size="6px"
-                                            data-toggle="tooltip" data-placement="left" title="只可輸入5的倍數" />
-                                        <button id="custom-egg-btn" type="button" class="btn btn-super btn-xs" style="display: none">Go</button>
-
-                                    </div>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" role="tabpanel" id="complete">
-                            <h3>Complete</h3>
-                            <div class="well well-lg">
-                                <div id="t-position" class="col-lg-5">
-                                    <i class="" aria-hidden="true"></i>
-                                    <img src="Content/image/Google_Maps_Icon.png" class="image-mission-small" />
-                                    <strong></strong>
-                                </div>
-                                <div id="t-missionType" class="col-lg-4">
-                                    <i class="" aria-hidden="true"></i>
-                                    <img src="Content/image/FamilyWork.png" class="image-mission-small" />
-                                    <strong></strong>
-                                </div>
-                                <div id="t-egg" class="col-lg-3">
-                                    <i class="" aria-hidden="true"></i>
-                                    <img src="Content/image/egg2.png" class="image-mission-small" />
-                                    <strong></strong>
-                                </div>
-                            </div>
-
-                            <div class="row mission-create-form">
-                                <div class="form-group">
-                                    <label for="inputMissionTitle">
-                                        <strong>任務主旨</strong>
-                                    </label>
-                                    <input type="email" class="form-control" id="inputMissionTitle" placeholder="限50字">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputMissionDetail">
-                                        <strong>任務內容</strong>
-                                    </label>
-                                    <textarea class="form-control" rows="6" id="inputMissionDetail" placeholder="限500字"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputMissionContact">
-                                        <strong>聯絡方式</strong>
-                                    </label>
-                                    <textarea class="form-control" rows="3" id="inputMissionContact" placeholder="限100字"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-super">建立</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </section>
+        <div class="col-sm-4">
+            <h3>Column 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
     </div>
-
-    <script>
-        google.maps.event.addDomListener(window, 'load', showUserClickPanel);
-    </script>
-    <script src="~/Content/Script/customer2.js"></script>
 </div>

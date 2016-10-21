@@ -122,7 +122,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\ImageBuilder.cs" />
+    <Compile Include="Common\UrlBuilder.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -155,7 +155,7 @@
     <Content Include="Content\Image\tag_work.png" />
     <Content Include="Content\Script\bootstrap.js" />
     <Content Include="Content\Script\create.js" />
-    <Content Include="Content\Script\Custom.js" />
+    <Content Include="Content\Script\SearchMission.js" />
     <Content Include="Content\Script\customer2.js" />
     <Content Include="Content\Script\googlemap.js" />
     <Content Include="Content\Script\jquery.js" />
@@ -202,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\CreateMission.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\CustomerInfo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

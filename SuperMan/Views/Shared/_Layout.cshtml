@@ -1,19 +1,23 @@
-﻿<!DOCTYPE html>
+﻿@using SuperMan.Common;
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@Page.Title</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd8CIfC7a5QepYroYyRMwYxPSRx1sd9yA"></script>
-    <script src="~/Content/Script/googlemap.js"></script>
-    <script src="~/Content/Script/markerclusterer.js"></script>
+    <script src="@Html.ScriptUrl("googlemap.js")"></script>
+    <script src="@Html.ScriptUrl("markerclusterer.js")"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="~/Content/Css/2-col-portfolio.css" />
-    <link rel="stylesheet" href="~/Content/Css/stepbar.css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/black-tie/jquery-ui.css" />
+    <link rel="stylesheet" href="@Html.CssUrl("2-col-portfolio.css")" />
+    <link rel="stylesheet" href="@Html.CssUrl("stepbar.css")" />
 
     @RenderSection("head", required: false)
 </head>

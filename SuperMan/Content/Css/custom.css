@@ -1,3 +1,33 @@
-﻿.navbar-nav li {
-    margin-right:10px;
+﻿#mission-content {
+    position: relative;
 }
+
+    #mission-content .show-mission {
+        position: absolute;
+        z-index: 3;
+        padding: 5px;
+        margin: 5px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+#mission-info {
+    width: 30%;
+    position: absolute;
+    z-index: 3;
+    padding: 5px;
+    margin: 5px;
+    background-color: #fff;
+}
+
+    #mission-info .hide-mission {
+        float: right;
+        padding: 0px 5px 5px 5px;
+        margin: 5px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    #mission-info .mission {
+        padding: 20px;
+    }
