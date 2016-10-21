@@ -154,11 +154,9 @@
     <Content Include="Content\Image\tag_join2.png" />
     <Content Include="Content\Image\tag_work.png" />
     <Content Include="Content\Script\bootstrap.js" />
-    <Content Include="Content\Script\create.js" />
+    <Content Include="Content\Script\CreateMission.js" />
     <Content Include="Content\Script\FrameWork.js" />
     <Content Include="Content\Script\SearchMission.js" />
-    <Content Include="Content\Script\customer2.js" />
-    <Content Include="Content\Script\googlemap.js" />
     <Content Include="Content\Script\jquery.js" />
     <Content Include="Content\Script\markerclusterer.js" />
     <Content Include="Global.asax" />
