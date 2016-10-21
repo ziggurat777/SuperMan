@@ -33,7 +33,7 @@ function showPosition() {
 
     var icon = {
         //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
-        url: "../Content/Image/tag_work.png",
+        url: UrlBuilder.ImageUrl("tag_work.png"),
         size: new google.maps.Size(36, 48),
         scaledSize: new google.maps.Size(36, 48), // scaled size
         origin: new google.maps.Point(0, 0), // origin
@@ -42,7 +42,7 @@ function showPosition() {
 
     var icon_tool = {
         //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
-        url: "../Content/Image/tag_help.png",
+        url: UrlBuilder.ImageUrl("tag_help.png"),
         size: new google.maps.Size(36, 48),
         scaledSize: new google.maps.Size(36, 48), // scaled size
         origin: new google.maps.Point(0, 0), // origin
@@ -51,7 +51,7 @@ function showPosition() {
 
     var icon_join = {
         //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
-        url: "../Content/image/tag_join.png",
+        url: UrlBuilder.ImageUrl("tag_join.png"),
         size: new google.maps.Size(36, 48),
         scaledSize: new google.maps.Size(36, 48), // scaled size
         origin: new google.maps.Point(0, 0), // origin
@@ -60,7 +60,7 @@ function showPosition() {
 
     var icon_join2 = {
         //url: "http://wfarm1.dataknet.com/static/resources/icons/set105/7ce3e2c.png", // url
-        url: "../Content/image/tag_join2.png",
+        url: UrlBuilder.ImageUrl("tag_join2.png"),
         size: new google.maps.Size(36, 48),
         scaledSize: new google.maps.Size(36, 48), // scaled size
         origin: new google.maps.Point(0, 0), // origin
@@ -176,7 +176,7 @@ function createMarker(latlng, name) {
     //var contentString = html;
 
     var icon = {
-        url: "../Content/Image/point.png", // url
+        url: UrlBuilder.ImageUrl("point.png"), // url
         //url: "image/FamilyWork.png",
         size: new google.maps.Size(36, 60),
         scaledSize: new google.maps.Size(36, 60), // scaled size

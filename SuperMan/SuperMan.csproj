@@ -155,6 +155,7 @@
     <Content Include="Content\Image\tag_work.png" />
     <Content Include="Content\Script\bootstrap.js" />
     <Content Include="Content\Script\create.js" />
+    <Content Include="Content\Script\FrameWork.js" />
     <Content Include="Content\Script\SearchMission.js" />
     <Content Include="Content\Script\customer2.js" />
     <Content Include="Content\Script\googlemap.js" />
