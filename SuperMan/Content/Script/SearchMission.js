@@ -6,6 +6,8 @@ $("div.hide-mission").on("click", function () {
     $("#mission-info").fadeOut("slow");
 });
 
+var markerCluster;
+
 var Icon = {
     tag_work: {
         url: UrlBuilder.ImageUrl("tag_work.png"),
@@ -37,7 +39,13 @@ var Icon = {
     }
 }
 
+function initialize() {
+    //Get user position
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+
 function showPosition() {
+    // wait modify to user location
     var center = new google.maps.LatLng(24.1981, 120.6267);
 
     map = new google.maps.Map(document.getElementById('map'), {
@@ -47,65 +55,16 @@ function showPosition() {
         mapTypeControl: false
     });
 
-    var data = GetFakeData();
+    map.addListener('dragend', function () {
+        GetSearchResult(RefreshMarkers);
+    });
 
-    var markers = [];
+    map.addListener('zoom_changed', function () {
+        GetSearchResult(RefreshMarkers);
+    });
 
-    for (var i = 0; i < data.length; i++) {
-        var latLng = new google.maps.LatLng(data[i].latitude, data[i].longitude);
-        var marker = {};
-        switch (data[i].type) {
-            case "help":
-                marker = new google.maps.Marker({
-                    position: latLng,
-                    icon: Icon.tag_help,
-                    title: data[i].type
-                });
-                break;
-            case "work":
-                marker = new google.maps.Marker({
-                    position: latLng,
-                    icon: Icon.tag_work,
-                    title: data[i].type
-                });
-                break;
-            case "join":
-                marker = new google.maps.Marker({
-                    position: latLng,
-                    icon: Icon.tag_join,
-                    title: data[i].type
-                });
-                break;
-            case "join2":
-                marker = new google.maps.Marker({
-                    position: latLng,
-                    icon: Icon.tag_join2,
-                    title: data[i].type
-                });
-                break;
-            default:
-                return;
-        }
-
-        markers.push(marker);
-
-        $.each(markers, function (i, v) {
-            v.addListener('click', function () {
-                $.each(markers, function (i, o) {
-                    o.setAnimation(null);
-                })
-
-                if (v.getAnimation() !== null) {
-                    v.setAnimation(null);
-                } else {
-                    v.setAnimation(google.maps.Animation.BOUNCE);
-                }
-
-                $("div.show-mission").trigger("click");
-            });
-        });
-    }
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://googlemaps.github.io/js-marker-clusterer/images/m' });
+    // init map
+    GetSearchResult(InitialMarkers);
 
     // user location 
     //console.log(position.coords.latitude + "," + position.coords.longitude);
@@ -122,29 +81,105 @@ function showPosition() {
     //markerCluster.addMarker(marker);
 };
 
-function initialize() {
-    //Get user position
-    navigator.geolocation.getCurrentPosition(showPosition);
+function InitialMarkers(mapMakers) {
+    SetMarkers(mapMakers);
 }
 
-function GetFakeData() {
-    // fake data
-    var data = [
-        { type: "help", latitude: 24.1981, longitude: 120.6267 },
-        { type: "work", latitude: 24.1620, longitude: 120.6404 },
-        { type: "join", latitude: 24.1760, longitude: 120.6470 },
-        { type: "work", latitude: 24.196436, longitude: 120.543454 },
-        { type: "help", latitude: 24.181015, longitude: 120.545292 },
-        { type: "work", latitude: 24.197154, longitude: 120.523584 },
-        { type: "join2", latitude: 24.189514, longitude: 120.512417 },
-        { type: "work", latitude: 24.146845, longitude: 120.645157 },
-        { type: "help", latitude: 24.145183, longitude: 120.646917 },
-        { type: "join", latitude: 24.145875, longitude: 120.644701 },
-        { type: "join2", latitude: 24.144960, longitude: 120.629129 },
-        { type: "help", latitude: 24.139321, longitude: 120.584154 },
-        { type: "work", latitude: 24.186072, longitude: 120.661487 },
-        { type: "join", latitude: 24.152009, longitude: 120.682258 },
-    ];
+function RefreshMarkers(mapMakers) {
+    markerCluster.clearMarkers();
+    SetMarkers(mapMakers);
+}
 
-    return data;
+function SetMarkers(mapMakers) {
+    var markers = [];
+    for (var i = 0; i < mapMakers.length; i++) {
+        var latLng = new google.maps.LatLng(mapMakers[i].Latitude, mapMakers[i].Longitude);
+        var marker = {};
+        switch (mapMakers[i].MissionType) {
+            case 1:
+                marker = new google.maps.Marker({
+                    position: latLng,
+                    icon: Icon.tag_help,
+                    title: mapMakers[i].MissionType.toString(),
+                    id: mapMakers[i].MissionId
+                });
+                break;
+            case 2:
+                marker = new google.maps.Marker({
+                    position: latLng,
+                    icon: Icon.tag_work,
+                    title: mapMakers[i].MissionType.toString(),
+                    id: mapMakers[i].MissionId
+                });
+                break;
+            case 3:
+                marker = new google.maps.Marker({
+                    position: latLng,
+                    icon: Icon.tag_join,
+                    title: mapMakers[i].MissionType.toString(),
+                    id: mapMakers[i].MissionId
+                });
+                break;
+            case 4:
+                marker = new google.maps.Marker({
+                    position: latLng,
+                    icon: Icon.tag_join2,
+                    title: mapMakers[i].MissionType.toString(),
+                    id: mapMakers[i].MissionId
+                });
+                break;
+            default:
+                return;
+        }
+        markers.push(marker);
+    }
+
+    MissionClickEvent(markers);
+
+    var mcOptions = { gridSize: 50, maxZoom: 15, imagePath: 'https://googlemaps.github.io/js-marker-clusterer/images/m' };
+
+    markerCluster = new MarkerClusterer(map, markers, mcOptions);
+}
+
+function MissionClickEvent(markers) {
+    $.each(markers, function (i, v) {
+        v.addListener('click', function () {
+            $.each(markers, function (i, o) {
+                if (v != o) {
+                    o.setAnimation(null);
+                }
+            })
+
+            v.setAnimation(google.maps.Animation.BOUNCE);
+            // get mission detail info
+            GetMissionDetail(v.id);
+
+            $("div.show-mission").trigger("click");
+        });
+    });
+}
+
+function RenderMissionDetail(data) {
+    $("#mission-title").html(data.Title);
+    $("#mission-detail").html(data.Description);
+    $("#missoin-reward").html(data.Star);
+}
+
+function GetSearchResult(func) {
+    $.ajax({
+        url: Global.Api.MissionSearch,
+        success: function (data) {
+            func(data.MapMakers);
+        }
+    });
+}
+
+function GetMissionDetail(Id) {
+    $.ajax({
+        // wait fo modify
+        url: Global.Api.MissionDetail + 10000000,
+        success: function (data) {
+            RenderMissionDetail(data.MissionCollection[0]);
+        }
+    });
 }

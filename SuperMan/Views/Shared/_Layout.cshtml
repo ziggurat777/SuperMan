@@ -20,6 +20,14 @@
     @RenderSection("head", required: false)
 </head>
 <body>
+    <script>
+        var Global = {
+            Api: {
+                MissionSearch: "http://52.198.189.19:2453/api/search/search",
+                MissionDetail: "http://52.198.189.19:2453/api/mission/"
+            }
+        }
+    </script>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
