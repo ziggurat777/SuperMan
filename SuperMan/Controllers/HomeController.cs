@@ -30,5 +30,10 @@ namespace SuperMan.Controllers
         {
             return View();
         }
+
+        public ActionResult MissionDetail()
+        {
+            return View();
+        }
     }
 }

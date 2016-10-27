@@ -89,8 +89,18 @@ function showPosition() {
 
         markers.push(marker);
 
-        $.each(markers, function (index, value) {
-            google.maps.event.addListener(value, 'click', function () {
+        $.each(markers, function (i, v) {
+            v.addListener('click', function () {
+                $.each(markers, function (i, o) {
+                    o.setAnimation(null);
+                })
+
+                if (v.getAnimation() !== null) {
+                    v.setAnimation(null);
+                } else {
+                    v.setAnimation(google.maps.Animation.BOUNCE);
+                }
+
                 $("div.show-mission").trigger("click");
             });
         });

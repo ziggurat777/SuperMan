@@ -156,6 +156,7 @@
     <Content Include="Content\Script\bootstrap.js" />
     <Content Include="Content\Script\CreateMission.js" />
     <Content Include="Content\Script\FrameWork.js" />
+    <Content Include="Content\Script\MissionDetail.js" />
     <Content Include="Content\Script\SearchMission.js" />
     <Content Include="Content\Script\jquery.js" />
     <Content Include="Content\Script\markerclusterer.js" />
@@ -204,6 +205,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\CustomerInfo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\MissionDetail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
