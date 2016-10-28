@@ -1,18 +1,20 @@
-$("#filterbtn").hover(function () {
-    $('#collapseExample').collapse('show');
-}, function () {
-    //$('#collapseExample').collapse('hide');
-}
+$("#filterbtn").hover(
+  function () {
+      $('#collapseExample').collapse('show');
+  }, function () {
+      //$('#collapseExample').collapse('hide');
+  }
 );
 
-$("#filterbtn").click(function () {
-    if ($('#collapseExample').is(":visible")) {
-        $('#collapseExample').collapse('hide');
-    }
-    else {
-        $('#collapseExample').collapse('show');
-    }
-}
+$("#filterbtn").click(
+  function () {
+      if ($('#collapseExample').is(":visible")) {
+          $('#collapseExample').collapse('hide');
+      }
+      else {
+          $('#collapseExample').collapse('show');
+      }
+  }
 );
 
 // BEGIN create mission js.
@@ -37,10 +39,12 @@ $(".next-step").click(function (e) {
             return;
         }
     }
+
+    setAddersss($("#missionAddress").val());
+
     var $active = $('.wizard .nav-tabs li.active');
     $active.next().removeClass('disabled');
     nextTab($active);
-
 });
 
 $(".prev-step").click(function (e) {
@@ -122,7 +126,7 @@ $("#custom-egg-btn").click(function (e) {
 });
 
 function checkEgg(count) {
-    if ((count % 5) == 0) {
+    if (count > 0 && (count % 5) == 0) {
         return true;
     }
     return false;
@@ -136,16 +140,45 @@ function prevTab(elem) {
 }
 
 function setPosition(lat, lng) {
-    // call google api ...  padding...
+    // call google api ... padding...
+}
+
+function setAddersss(address) {
+    if (address.length > 14) {
+        address = address.substr(0, 14);
+    }
+    $("#t-position > strong").text(address + " ...");
 }
 
 function setMissionType(image, title) {
     $("#t-missionType > strong").text(title);
+    $("#t-missionType > img").attr("src", image);
 }
 
 function setEgg(count) {
     $("#t-egg > strong").text("x " + count);
 }
+
+// mission detail submit
+$(".propsbtn").click(function (e) {
+    if ($(this).hasClass("btn-default")) {
+        $(this).removeClass("btn-default").addClass("btn-super");
+    }
+    else {
+        $(this).removeClass("btn-super").addClass("btn-default");
+    }
+    console.log($(this).attr("class"));
+});
+// END
+
+// profile page
+$(".btn-pref .btn").click(function () {
+    $(".btn-pref .btn").removeClass("btn-super").addClass("btn-super-low");
+    // $(".tab").addClass("active"); // instead of this do the below 
+    $(this).removeClass("btn-super-low").addClass("btn-super");
+});
+// END
+
 // END
 
 
@@ -154,9 +187,10 @@ function showUserClickPanel() {
     var center = new google.maps.LatLng(24.1981, 120.6267);
 
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
+        zoom: 13,
         center: center,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false
     });
 
     var marker = null;

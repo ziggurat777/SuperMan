@@ -16,9 +16,10 @@ namespace SuperMan.Controllers
             return View();
         }
 
-        public ActionResult CustomerInfo()
+        public ActionResult MemberProfile()
         {
             return View();
         }
+
     }
 }
