@@ -137,11 +137,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\Css\2-col-portfolio.css" />
     <Content Include="Content\Css\bootstrap.css" />
+    <Content Include="Content\Css\bootstrap.min.css" />
     <Content Include="Content\Css\custom.css" />
     <Content Include="Content\Css\font-awesome.min.css" />
     <Content Include="Content\Css\profile.css" />
     <Content Include="Content\Css\stepbar.css" />
+    <Content Include="Content\Fonts\fontawesome-webfont - Copy.svg" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Fonts\glyphicons-halflings-regular - Copy.svg" />
     <Content Include="Content\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Image\cate_home.png" />
     <Content Include="Content\Image\cate_work.png" />
@@ -182,6 +185,7 @@
     <Content Include="Content\Image\tag_join.png" />
     <Content Include="Content\Image\tag_join2.png" />
     <Content Include="Content\Image\tag_work.png" />
+    <Content Include="Content\Image\user-shape.svg" />
     <Content Include="Content\Script\bootstrap.js" />
     <Content Include="Content\Script\CreateMission.js" />
     <Content Include="Content\Script\FrameWork.js" />
@@ -240,6 +244,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\MemberProfile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\FontAwesome - Copy.otf" />
+    <Content Include="Content\Fonts\fontawesome-webfont - Copy.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont - Copy.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont - Copy.woff" />
+    <Content Include="Content\Fonts\fontawesome-webfont - Copy.woff2" />
+    <Content Include="Content\Fonts\glyphicons-halflings-regular - Copy.eot" />
+    <Content Include="Content\Fonts\glyphicons-halflings-regular - Copy.ttf" />
+    <Content Include="Content\Fonts\glyphicons-halflings-regular - Copy.woff" />
+    <Content Include="Content\Fonts\glyphicons-halflings-regular - Copy.woff2" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -166,8 +166,10 @@ function RenderMissionDetail(data) {
 }
 
 function GetSearchResult(func) {
+
     $.ajax({
         url: Global.Api.MissionSearch,
+        data: {'request.maxSize': 50},
         success: function (data) {
             func(data.MapMakers);
         }
