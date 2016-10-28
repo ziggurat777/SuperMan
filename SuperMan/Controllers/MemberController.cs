@@ -6,19 +6,15 @@ using System.Web.Mvc;
 
 namespace SuperMan.Controllers
 {
-    public class HomeController : Controller
+    public class MemberController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Member/
 
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult CustomerInfo()
-        {
-            return View();
-        }
     }
 }

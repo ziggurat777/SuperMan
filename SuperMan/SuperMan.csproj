@@ -124,6 +124,8 @@
   <ItemGroup>
     <Compile Include="Common\UrlBuilder.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\MissionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -142,13 +144,39 @@
     <Content Include="Content\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Image\cate_home.png" />
     <Content Include="Content\Image\cate_work.png" />
+    <Content Include="Content\Image\chris.png" />
     <Content Include="Content\Image\egg2.png" />
     <Content Include="Content\Image\FamilyWork.png" />
     <Content Include="Content\Image\FamilyWork_1.png" />
     <Content Include="Content\Image\fix.svg" />
     <Content Include="Content\Image\FixTool.png" />
     <Content Include="Content\Image\Google_Maps_Icon.png" />
+    <Content Include="Content\Image\halo_bk.png" />
+    <Content Include="Content\Image\logo.png" />
+    <Content Include="Content\Image\marker-houst.png" />
+    <Content Include="Content\Image\marker-maintain.png" />
+    <Content Include="Content\Image\marker-service.png" />
+    <Content Include="Content\Image\marker-together.png" />
+    <Content Include="Content\Image\marker-transport.png" />
+    <Content Include="Content\Image\medal-house.png" />
+    <Content Include="Content\Image\medal-house2.png" />
+    <Content Include="Content\Image\medal-maintain.png" />
+    <Content Include="Content\Image\medal-maintain2.png" />
+    <Content Include="Content\Image\medal-together.png" />
+    <Content Include="Content\Image\medal-together2.png" />
+    <Content Include="Content\Image\medal-transport.png" />
+    <Content Include="Content\Image\medal-transport2.png" />
     <Content Include="Content\Image\point.png" />
+    <Content Include="Content\Image\tag-house.png" />
+    <Content Include="Content\Image\tag-house.svg" />
+    <Content Include="Content\Image\tag-maintain.png" />
+    <Content Include="Content\Image\tag-maintain.svg" />
+    <Content Include="Content\Image\tag-service.png" />
+    <Content Include="Content\Image\tag-service.svg" />
+    <Content Include="Content\Image\tag-together.png" />
+    <Content Include="Content\Image\tag-together.svg" />
+    <Content Include="Content\Image\tag-transport.png" />
+    <Content Include="Content\Image\tag-transport.svg" />
     <Content Include="Content\Image\tag_help.png" />
     <Content Include="Content\Image\tag_join.png" />
     <Content Include="Content\Image\tag_join2.png" />
@@ -156,7 +184,7 @@
     <Content Include="Content\Script\bootstrap.js" />
     <Content Include="Content\Script\CreateMission.js" />
     <Content Include="Content\Script\FrameWork.js" />
-    <Content Include="Content\Script\MissionDetail.js" />
+    <Content Include="Content\Script\Help.js" />
     <Content Include="Content\Script\SearchMission.js" />
     <Content Include="Content\Script\jquery.js" />
     <Content Include="Content\Script\markerclusterer.js" />
@@ -198,16 +226,16 @@
     <Content Include="Content\Fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\SearchMission.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\CreateMission.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\CustomerInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\MissionDetail.cshtml" />
+    <Content Include="Views\Mission\CreateMission.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Mission\SearchMission.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Mission\Help.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

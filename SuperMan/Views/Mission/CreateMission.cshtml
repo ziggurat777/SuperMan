@@ -60,28 +60,24 @@
                             <p></p>
                             <div class="row">
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
-                                    <p>居家清潔1</p>
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("tag-house.svg")" />
+                                    <p>居家 / 清潔</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
-                                    <p>居家清潔2</p>
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("tag-maintain.svg")" />
+                                    <p>專業 / 維修</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
-                                    <p>居家清潔3</p>
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("tag-service.svg")" />
+                                    <p>代客 / 服務</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
-                                    <p>居家清潔4</p>
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("tag-together.svg")" />
+                                    <p>揪團 / 出遊</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
-                                    <p>居家清潔5</p>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <img class="image-mission image-halo" src="@Html.ImageUrl("FamilyWork.png")" />
-                                    <p>居家清潔6</p>
+                                    <img class="image-mission image-halo" src="@Html.ImageUrl("tag-transport.svg")" />
+                                    <p>共乘 / 運送</p>
                                 </div>
                             </div>
                             <ul class="list-inline pull-right">
@@ -162,12 +158,59 @@
                                     </label>
                                     <textarea class="form-control" rows="3" id="inputMissionContact" placeholder="限100字"></textarea>
                                 </div>
+                                <hr />
+
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-super">建立</button>
+                                    <a class="btn btn-danger btn-sm" role="button" data-toggle="collapse" href="#collapseProps" aria-expanded="false" aria-controls="collapseProps">
+                                        <span class="glyphicon glyphicon-plus"></span>使用道具
+                                    </a>
+                                    <div class="well well-lg collapse" id="collapseProps">
+                                        <div class="row propsList">
+                                            <div class="col-lg-6">
+                                                <img class="image-egg img-rounded pull-left" src="@Html.ImageUrl("tag-transport.svg")">
+                                                <h4><strong>超人電話亭</strong> <span class="label label-primary">x 8</span></h4>
+                                                <strong>使用後於任務列表高亮置頂  </strong><span class="label label-success">1H</span>
+                                                <a class="btn btn-default btn-circle btn-xl pull-right propsbtn"><span class="glyphicon glyphicon-ok"></span>></a>
+                                                <p>
+                                                    <a class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>購買 </a>
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <img class="image-egg img-rounded pull-left" src="@Html.ImageUrl("tag-transport.svg")">
+                                                <h4><strong>超人披風</strong> <span class="label label-primary">x 80</span></h4>
+                                                <strong>使用後於任務列表高亮置頂  </strong><span class="label label-success">1H</span>
+                                                <a class="btn btn-default btn-circle btn-xl pull-right propsbtn"><span class="glyphicon glyphicon-ok"></span></a>
+                                                <p>
+                                                    <a class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>購買 </a>
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <img class="image-egg img-rounded pull-left" src="@Html.ImageUrl("tag-transport.svg")">
+                                                <h4><strong>超人手錶</strong> <span class="label label-primary">x 18</span></h4>
+                                                <strong>使用後於任務列表高亮置頂  </strong><span class="label label-success">1H</span>
+                                                <a class="btn btn-default btn-circle btn-xl pull-right propsbtn"><span class="glyphicon glyphicon-ok"></span>></a>
+                                                <p>
+                                                    <a class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>購買 </a>
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <img class="image-egg img-rounded pull-left" src="@Html.ImageUrl("tag-transport.svg")">
+                                                <h4><strong>超人內褲</strong> <span class="label label-danger">x 0</span></h4>
+                                                <strong>使用後於任務列表高亮置頂  </strong><span class="label label-success">1H</span>
+                                                <a class="btn btn-default btn-circle btn-xl pull-right propsbtn disabled"><span class="glyphicon glyphicon-ok"></span>></a>
+                                                <p>
+                                                    <a class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>購買 </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <hr />
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-super btn-block">建立</button>
+                            </div>
                         </div>
-                        <div class="clearfix"></div>
                     </div>
                 </div>
             </section>

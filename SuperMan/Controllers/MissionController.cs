@@ -6,17 +6,22 @@ using System.Web.Mvc;
 
 namespace SuperMan.Controllers
 {
-    public class HomeController : Controller
+    public class MissionController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Mission/
 
-        public ActionResult Index()
+        public ActionResult CreateMission()
         {
             return View();
         }
 
-        public ActionResult CustomerInfo()
+        public ActionResult SearchMission()
+        {
+            return View();
+        }
+
+        public ActionResult Help()
         {
             return View();
         }
